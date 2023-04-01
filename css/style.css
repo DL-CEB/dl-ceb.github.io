@@ -1,49 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-*
-{
-margin: 0;
-padding:0;
-box-sizing: border-box;
-font-family: 'Montserrat', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
-body
-{
+
+body {
     background-color: #eeeeee;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-h2{
+
+h2 {
     margin-top: 2rem;
+    text-align: center;
 }
-.contact-container
-{margin: 5% 0;
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-container {
+    margin: 5% 0;
     display: flex;
     flex-direction: row;
-    width: 900px;
-    max-width: 90%;
-    box-shadow:  9px 9px 18px #cdcdcd,              -9px -9px 18px #ffffff;
+    /* width: 600px; */
+    width: 90%;
+    box-shadow: 9px 9px 18px #cdcdcd, -9px -9px 18px #ffffff;
 }
+
 /* Left side Design*/
-.contact-left
-{
+.contact-left {
     width: 100%;
     padding: 20px;
     color: #52565e;
 }
-.contact-form
-{
+
+.contact-form {
     margin-top: 10px;
     width: 100%;
 }
-.single-row
-{
+
+.single-row {
     display: flex;
     justify-content: space-between;
 }
-.form-in
-{
+
+.form-in {
     padding: 0.5em;
     font-size: 14px;
     width: 100%;
@@ -51,31 +58,29 @@ h2{
     margin-top: 1em;
     background: #eeeeee;
     border: none;
-    box-shadow: inset 5px 5px 12px #e0e0e0, 
-            inset -5px -5px 12px #fcfcfc;
-            outline: none;
+    box-shadow: inset 5px 5px 12px #e0e0e0,
+        inset -5px -5px 12px #fcfcfc;
+    outline: none;
     color: #52565e;
 }
 
-.ml
-{
+.ml {
     margin-left: 10px;
 }
-.mr
-{
+
+.mr {
     margin-right: 10px;
 }
 
-.multiple-row
-{
+.multiple-row {
     position: relative;
 }
+
 /* #submit
 {
     display: none;
 } */
-#submit
-{
+#submit {
     position: absolute;
     font-size: 14px;
     bottom: 20px;
@@ -84,32 +89,32 @@ h2{
     background-color: #3369e7;
     border-radius: 100%;
     color: #eeeeee;
-    box-shadow:  6px 6px 12px #bebebe, 
-             -6px -6px 12px #ffffff;
+    box-shadow: 6px 6px 12px #bebebe,
+        -6px -6px 12px #ffffff;
     cursor: pointer;
 }
 
-#submit:hover
-{
-    box-shadow: inset 6px 6px 12px #2954b9, 
-            inset -6px -6px 12px #3d7eff;
+#submit:hover {
+    box-shadow: inset 6px 6px 12px #2954b9,
+        inset -6px -6px 12px #3d7eff;
 }
+
 /* Right side Design*/
 
-textarea
-{
+textarea {
     min-height: 200px;
 }
 
 .btn:focus {
-    outline:none !important;
-  }
-  
-  .neumorphic-btn {
+    outline: none !important;
+}
+
+.neumorphic-btn {
+    text-decoration: none;
     font-size: 20px;
     border: none;
     padding: 10px 40px;
-    border-radius: 40px;
+    border-radius: 15px;
     color: #6D7587;
     background-color: var(--back-color);
     /*box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.3), 
@@ -117,32 +122,41 @@ textarea
                 inset -14px -14px 20px -10px rgba(0, 0, 0, 0.1),
                 inset 14px 14px 20px -10px rgba(255, 255, 255, 0.5) !important;  */
     box-shadow: 7px 7px 15px rgba(55, 84, 170, .15),
-                -7px -7px 20px rgba(255, 255, 255, 1),
-                inset 0px 0px 4px rgba(255, 255, 255, .2),
-                inset 7px 7px 15px rgba(55, 84, 170, 0),
-                inset -7px -7px 20px rgba(255, 255, 255, 0),
-                0px 0px 4px rgba(255, 255, 255, 0) !important;
+        -7px -7px 20px rgba(255, 255, 255, 1),
+        inset 0px 0px 4px rgba(255, 255, 255, .2),
+        inset 7px 7px 15px rgba(55, 84, 170, 0),
+        inset -7px -7px 20px rgba(255, 255, 255, 0),
+        0px 0px 4px rgba(255, 255, 255, 0) !important;
     transition: box-shadow .25s ease !important;
-  }
-  
-  .neumorphic-btn:active {  
-    box-shadow: 7px 7px 15px rgba(55, 84, 170, .15),
-                -7px -7px 20px rgba(255, 255, 255, 1),
-                inset 0px 0px 4px rgba(255, 255, 255, 0),
-                inset 7px 7px 15px rgba(55, 84, 170, .15),
-                inset -7px -7px 20px rgba(255, 255, 255, 1),
-                0px 0px 4px rgba(255, 255, 255, .2) !important;
-  }
-  
+}
 
-@media only screen and (max-width: 770px)
-{
-    .contact-container
-    {
+.neumorphic-btn:active {
+    box-shadow: 7px 7px 15px rgba(55, 84, 170, .15),
+        -7px -7px 20px rgba(255, 255, 255, 1),
+        inset 0px 0px 4px rgba(255, 255, 255, 0),
+        inset 7px 7px 15px rgba(55, 84, 170, .15),
+        inset -7px -7px 20px rgba(255, 255, 255, 1),
+        0px 0px 4px rgba(255, 255, 255, .2) !important;
+}
+
+p {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.projects {
+    margin: 1rem 1rem 3rem 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 770px) {
+    .contact-container {
         flex-direction: column;
     }
-    .contact-left
-    {
+
+    .contact-left {
         width: 100%;
     }
 }

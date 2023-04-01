@@ -5,7 +5,8 @@
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 <link rel="stylesheet" href="./css/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DL-CEB Performing Maintenance</title>
+<link rel="shortcut icon" type="image/png" href="./images/favicon_1.png"/>
+<title>DL-CEB</title>
 </head>
 
 <!-- 034ea2 blue
@@ -17,14 +18,14 @@ ed0677 pink -->
   <section>
     <div class="contact-container" >
     <div class="contact-left">
-      <h2>Get In Touch</h2>
+      <h2>Get In Touch </h2>
       <form class="contact-form" id="GFG" method="post" enctype="text/plain">
         <div class="single-row">
-            <input id="name" type="text" placeholder="Name" class="form-in mr">
-            <input id="project" type="text" placeholder="Project"class="form-in ml" >
+            <input id="name" type="text" placeholder="Name" class="form-in mr" required>
+            <input id="project" type="text" placeholder="Project"class="form-in ml" required>
         </div>
         <div class="multiple-row">
-            <input id="email" type="email" placeholder="Email" class="form-in">
+            <input id="email" type="email" placeholder="Email" class="form-in" required>
             <textarea id="message" placeholder="Your Message" class="form-in"></textarea>
          
             <a href="#" type="submit" id="submit" onclick="sndMsg()">
@@ -38,8 +39,11 @@ ed0677 pink -->
   </section>
 <section>
   <p>Ideas made to live till now</p>
-<br>
-  <button type="button" class="my-5 btn neumorphic-btn">Button</button>
+  <div class="projects">
+    <a href="https://github.com/n48331/edetail-tool" target="_blank" class="my-5 btn neumorphic-btn">eDetail Tool 🚀</a>
+    <a href="https://cebemailfinder.pythonanywhere.com/" target="_blank" class="my-5 btn neumorphic-btn">Email Template finder 📩</a>
+    <a href="https://dl-ceb.github.io/resources/" target="_blank" class="my-5 btn neumorphic-btn">Resources stocks🎉</a>
+  </div>
 </section>
 <script src="./js/telegram.js"></script>
     <script>
@@ -50,16 +54,26 @@ ed0677 pink -->
             var email = document.getElementById("email").value;
             var project = document.getElementById("project").value;
             var message = document.getElementById("message").value;
+      
+            if(name==''|| email=='' || project=='') {
+        document.getElementById("name").style.cssText+="border:1px solid red"
+        document.getElementById("email").style.cssText+="border:1px solid red"
+        document.getElementById("project").style.cssText+="border:1px solid red"
+        alert('Please fill required fields ⚠️')  
+        
+      }else{
 
-            sendMessage(
-        `<a href="https://resource.indegene.com/indegene/v2/images/nextjs12/images/logo/indegene-logo.svg"> </a><b>New message from DL_CEB</b>\n\n💎 <b>Name:</b> ${name}\n📩 <b>Email:</b> ${email}\n🚀 <b>Project:</b> ${project}\n📌 <b>Message:</b> ${message}\n`,
-        "html",
-        chat_id
-      ).then(
-      alert('Message sent successfully 🎊'),  
-      document.getElementById("GFG").reset()
+        sendMessage(
+    `<a href="https://resource.indegene.com/indegene/v2/images/nextjs12/images/logo/indegene-logo.svg"> </a><b>New message from DL_CEB</b>\n\n💎 <b>Name:</b> ${name}\n📩 <b>Email:</b> ${email}\n🚀 <b>Project:</b> ${project}\n📌 <b>Message:</b> ${message}\n`,
+    "html",
+    chat_id
+  ).then(
+  alert('Message sent successfully 🎊'),  
+  document.getElementById("GFG").reset(),
+  location.reload()
 
-      );
+  );
+      }     
 
 
         }
