@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="./css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DL-CEB Performing Maintenance</title>
+</head>
+
+<!-- 034ea2 blue
+00c0f3 blue 2
+ed0677 pink -->
+<body>
+  <h2>If you have any ideas and want to make it real</h2>
+
+  <section>
+    <div class="contact-container" >
+    <div class="contact-left">
+      <h2>Get In Touch</h2>
+      <form class="contact-form" id="GFG" method="post" enctype="text/plain">
+        <div class="single-row">
+            <input id="name" type="text" placeholder="Name" class="form-in mr">
+            <input id="project" type="text" placeholder="Project"class="form-in ml" >
+        </div>
+        <div class="multiple-row">
+            <input id="email" type="email" placeholder="Email" class="form-in">
+            <textarea id="message" placeholder="Your Message" class="form-in"></textarea>
+         
+            <a href="#" type="submit" id="submit" onclick="sndMsg()">
+            <i class="fas fa-paper-plane"></i></a>
+        </div>
+                  
+      </form>
+    </div>
+    
+  </div>
+  </section>
+<section>
+  <p>Ideas made to live till now</p>
+<br>
+  <button type="button" class="my-5 btn neumorphic-btn">Button</button>
+</section>
+<script src="./js/telegram.js"></script>
+    <script>
+
+
+        function sndMsg() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var project = document.getElementById("project").value;
+            var message = document.getElementById("message").value;
+
+            sendMessage(
+        `<a href="https://resource.indegene.com/indegene/v2/images/nextjs12/images/logo/indegene-logo.svg"> </a><b>New message from DL_CEB</b>\n\n💎 <b>Name:</b> ${name}\n📩 <b>Email:</b> ${email}\n🚀 <b>Project:</b> ${project}\n📌 <b>Message:</b> ${message}\n`,
+        "html",
+        chat_id
+      ).then(
+      alert('Message sent successfully 🎊'),  
+      document.getElementById("GFG").reset()
+
+      );
+
+
+        }
+
+
+    </script>
+</body>
+</html>
