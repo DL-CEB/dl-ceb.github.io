@@ -16,7 +16,7 @@ body {
 }
 
 h2 {
-    margin-top: 2rem;
+    margin: 1rem 2rem;
     text-align: center;
 }
 section{
@@ -47,7 +47,9 @@ section{
 
 .single-row {
     display: flex;
+    gap: 10px;
     justify-content: space-between;
+    /* flex-direction: column; */
 }
 
 .form-in {
@@ -64,13 +66,7 @@ section{
     color: #52565e;
 }
 
-.ml {
-    margin-left: 10px;
-}
 
-.mr {
-    margin-right: 10px;
-}
 
 .multiple-row {
     position: relative;
@@ -81,6 +77,7 @@ section{
     display: none;
 } */
 #submit {
+    
     position: absolute;
     font-size: 14px;
     bottom: 20px;
@@ -95,8 +92,8 @@ section{
 }
 
 #submit:hover {
-    box-shadow: inset 6px 6px 12px #2954b9,
-        inset -6px -6px 12px #3d7eff;
+    box-shadow: inset 6px 6px 12px #034ea2,
+        inset -6px -6px 12px #034ea2;
 }
 
 /* Right side Design*/
@@ -115,7 +112,7 @@ textarea {
     border: none;
     padding: 10px 40px;
     border-radius: 15px;
-    color: #6D7587;
+    color: #034ea2;
     background-color: var(--back-color);
     /*box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.3), 
                 -2px -2px 4px 2px rgba(255, 255, 255, 1), 
@@ -150,13 +147,27 @@ p {
     gap: 1rem;
     flex-wrap: wrap;
 }
-
+.footer{
+    font-size: 12px;
+}
 @media only screen and (max-width: 770px) {
+    .single-row {
+        display: flex;
+        flex-direction: column;
+    }
+    
     .contact-container {
         flex-direction: column;
     }
 
     .contact-left {
         width: 100%;
+    }
+    .form-in {
+        font-size: 18px;
+       
+    }
+    #submit {
+        font-size: 16px;
     }
 }

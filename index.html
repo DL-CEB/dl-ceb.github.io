@@ -45,10 +45,10 @@ ed0677 pink -->
     <a href="https://dl-ceb.github.io/resources/" target="_blank" class="my-5 btn neumorphic-btn">Resources stocks🎉</a>
   </div>
 </section>
+<p id="cp" class="footer">&#169; 2023  DL CEB</p>
 <script src="./js/telegram.js"></script>
     <script>
-
-
+      document.getElementById('cp').innerHTML = "&#169; "+  new Date().getFullYear()+ " DL CEB"
         function sndMsg() {
             var name = document.getElementById("name").value;
             var email = document.getElementById("email").value;
